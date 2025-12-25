@@ -46,7 +46,6 @@ public class CarritoServiceImpl implements CarritoService{
     public CreateCarritoResponseDto createCarrito(CreateCarritoRequestDto createCarritoRequestDto) {
         Cliente cliente = clienteService.findByDni(createCarritoRequestDto.getClienteDni());
 
-        //habria que ver como seria el flujo en el front dde la creacion del carrito
         carritoRepository.findByCliente_DniAndEstado(createCarritoRequestDto.getClienteDni(), CarritoStatus.ABIERTO)
                 .ifPresent(c -> {
                     throw new ConflictException("El cliente ya tiene un carrito abierto");

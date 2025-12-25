@@ -53,5 +53,4 @@ public class CompraController {
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
-    //DETALLE DE UNA COMPRA CON VIEW
 }

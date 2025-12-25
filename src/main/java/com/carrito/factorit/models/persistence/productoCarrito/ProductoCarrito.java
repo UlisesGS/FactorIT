@@ -23,7 +23,7 @@ public class ProductoCarrito {
     private Carrito carrito;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "producto_id", nullable = false)
+    @JoinColumn(name = "producto_id", nullable = false, foreignKey = @ForeignKey(name = "FK_PRODUCTO"))
     private Producto producto;
 
 

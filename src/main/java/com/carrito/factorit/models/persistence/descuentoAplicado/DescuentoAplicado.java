@@ -27,6 +27,6 @@ public class DescuentoAplicado {
     private BigDecimal monto;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "compra_id")
+    @JoinColumn(name = "compra_id", nullable = false, foreignKey = @ForeignKey(name = "FK_CARRITO"))
     private Compra compra;
 }

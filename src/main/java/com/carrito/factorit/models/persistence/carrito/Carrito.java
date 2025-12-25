@@ -29,12 +29,13 @@ public class Carrito {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cliente_id", nullable = false)
+    @JoinColumn(name = "cliente_id", nullable = false, foreignKey = @ForeignKey(name = "FK_CLIENTE"))
     private Cliente cliente;
 
-    @Column(nullable = false)
+    @Column(name = "fecha_creacion",nullable = false)
     private LocalDateTime fechaCreacion;
 
+    @Column(name = "fecha_cierre")
     private LocalDateTime fechaCierre;
 
     @Column(nullable = false)
