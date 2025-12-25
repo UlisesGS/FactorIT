@@ -4,6 +4,14 @@ Para planificar el desarrollo de la aplicación, el primer objetivo fue identifi
 Como resultado se encontraron 3 puntos claves: la entidad Compra, la entidad Carrito y la entidad ProductoCarrito.
 Se realizaron las pruebas unitarias sobre los servicios más relevantes utilizando JUnit y Mockito.
 
+Variables de entorno usadas para la db:
+DB_HOST, 
+DB_PORT,
+DB_NAME,
+DB_USERNAME,
+DB_PASSWORD,
+DB_URL
+
 Base de datos: PostgreSql
 
 Documentación realizada con Swagger: http://localhost:8080/swagger-ui/index.html#/
